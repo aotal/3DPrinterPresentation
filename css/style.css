@@ -1,0 +1,113 @@
+/*********************************************
+ * USER STYLES
+ *********************************************/
+
+.reveal img {
+	max-width: 60%;
+}
+
+.reveal h1,
+.reveal h2 {
+	color: #53c0dd;
+	margin: 0 0 1em 0;
+}
+
+.dark-slide h1,
+.dark-slide h2 {
+	text-shadow: 5px 5px 8px rgba(0, 0, 0, 0.5);
+}
+
+
+.dark-slide h2 {
+	font-size: 2.2em;
+}
+
+.dark-slide h3,
+.dark-slide h4,
+.dark-slide h5,
+.dark-slide h6,
+.dark-slide small {
+	color: white;
+	text-transform: initial;
+}
+
+.reveal .title-slide {
+	font-size: 0px;
+}
+
+.reveal .title-slide .logo + h1 {
+	margin-top: 1.5em;
+}
+
+.title-slide h1 + h3 {
+	margin-top: 1.5em;
+}
+
+.reveal .slides .logo {
+	height: 50px;
+}
+
+.slides .logo img {
+	height: 50px;
+	background: transparent;
+	max-width: initial;
+	max-height: initial;
+}
+
+.reveal .logo--left {
+	position: absolute;
+	left: -1em;
+	top: -135px;
+}
+
+.reveal .logo--right {
+	position: absolute;
+	top: -135px;
+	right: -1em;
+}
+
+.footnote {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	color: #888;
+}
+
+.footnote .center {
+	text-align: center;
+}
+
+.col.col {
+	width: 47%;
+	margin: 0 1%;
+	display: inline-block;
+	vertical-align: top;
+}
+
+.col.col--large {
+	width: 55%
+}
+
+.col.col--small {
+	width: 35%
+}
+
+.red-text {
+	color: #ec5d57;
+}
+
+.featured-image {
+	width: 65%;
+}
+
+.full-image.full-image {
+	width: 100%;
+	max-width: initial;
+}
+
+
+/*override some stupid rules*/
+.reveal .mobile-mockup img {
+	margin: 0;
+}
