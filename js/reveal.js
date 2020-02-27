@@ -120,7 +120,7 @@
 			// - null:   Media will only autoplay if data-autoplay is present
 			// - true:   All media will autoplay, regardless of individual setting
 			// - false:  No media will autoplay, regardless of individual setting
-			autoPlayMedia: null,
+			autoPlayMedia: true,
 
 			// Controls automatic progression to the next slide
 			// - 0:      Auto-sliding only happens if the data-autoslide HTML attribute
