@@ -22,6 +22,7 @@
 	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
 	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+	<script src="https://www.youtube.com/iframe_api"></script>
 
 
 	<!-- Theme used for syntax highlighting of code -->
@@ -35,6 +36,26 @@
 		link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
 		document.getElementsByTagName('head')[0].appendChild(link);
 	</script>
+	<script type="text/javascript">
+      function onYouTubeIframeAPIReady() {
+        var ctrlq = document.getElementById("youtube-player");
+        var player = new YT.Player('youtube-player', {
+          height: ctrlq.dataset.height,
+          width: ctrlq.dataset.width,
+          events: {
+            'onReady': function(e) {
+              e.target.cueVideoById({
+                videoId: ctrlq.dataset.video,
+                startSeconds: ctrlq.dataset.startseconds,
+                endSeconds: ctrlq.dataset.endseconds
+              });
+            }
+          }
+        });
+      }
+    </script>
+
+
 
 	<!--[if lt IE 9]>
 		<script src="lib/js/html5shiv.js"></script>
@@ -91,7 +112,16 @@
 				</section>
 					<section>
 						<h3>FDM</h3>
-						<iframe data-src="https://www.youtube.com/embed/sGF6bOi1NfA?autoplay=1"></iframe>
+						<iframe data-src="https://www.youtube.com/embed/WHO6G67GJbM?autoplay=1"></iframe>
+				</section>
+				<section>
+					<div data-video = "WHO6G67GJbM"
+         data-startseconds = "70"
+         data-endseconds = "110"
+         data-height = "309"
+         data-width = "550"
+         id = "youtube-player">
+    </div>
 				</section>
 			</section>
 
