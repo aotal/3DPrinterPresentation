@@ -36,27 +36,25 @@
 		link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
 		document.getElementsByTagName('head')[0].appendChild(link);
 	</script>
+	<!-- Reproductor de vídeo -->
 	<script type="text/javascript">
-      function onYouTubeIframeAPIReady() {
-        var ctrlq = document.getElementById("youtube-player");
-        var player = new YT.Player('youtube-player', {
-          height: ctrlq.dataset.height,
-          width: ctrlq.dataset.width,
-          events: {
-            'onReady': function(e) {
-              e.target.cueVideoById({
-                videoId: ctrlq.dataset.video,
-                startSeconds: ctrlq.dataset.startseconds,
-                endSeconds: ctrlq.dataset.endseconds
-              });
-            }
-          }
-        });
-      }
-    </script>
-
-
-
+		function onYouTubeIframeAPIReady() {
+			var ctrlq = document.getElementById("youtube-player");
+			var player = new YT.Player('youtube-player', {
+				height: ctrlq.dataset.height,
+				width: ctrlq.dataset.width,
+				events: {
+					'onReady': function(e) {
+						e.target.cueVideoById({
+							videoId: ctrlq.dataset.video,
+							startSeconds: ctrlq.dataset.startseconds,
+							endSeconds: ctrlq.dataset.endseconds
+						});
+					}
+				}
+			});
+		}
+	</script>
 	<!--[if lt IE 9]>
 		<script src="lib/js/html5shiv.js"></script>
 		<![endif]-->
@@ -86,10 +84,9 @@
 			</section>
 			<section>
 				<h3>Definición</h3>
-				<p><em>
-						"A machine allowing the creation of a physical object from a three-dimensional digital model, typically by laying down many thin layers of a material in succession"
-					</em>
-				</p>
+				<blockquote cite="https://www.lexico.com/en/definition/3d_printer">
+					&ldquo;A machine allowing the creation of a physical object from a three-dimensional digital model, typically by laying down many thin layers of a material in succession.&rdquo;
+				</blockquote>
 			</section>
 			<section>
 				<section>
@@ -102,93 +99,32 @@
 				<section>
 					<img src="https://www.mistywest.com/wp-content/uploads/2019/07/Timeline3DPrinting2.png" alt="Timeline">
 				</section>
-
+			</section>
+			<section data-markdown>
+				### Tipos de impresión
+				De los diversos métodos de impresión 3D, alguno de los cuales se describen [aquí](https://all3dp.com/1/types-of-3d-printers-3d-printing-technology/),
+				vamos a centrarnos en dos: Modelado por deposición fundida (FDM) y estereolitografía (SLA)
 			</section>
 			<section>
-				<section data-markdown>
-					### Tipos de impresión
-					- En este momento hay diversos métodos de impresión ([Aquí](https://all3dp.com/1/types-of-3d-printers-3d-printing-technology/) se describen algunos)
-					- Nosotros nos centraremos en dos: Modelado de deposición fundida (FDM) y estereolitografía (SLA)
-				</section>
-					<section>
-						<h3>FDM</h3>
+				<section>
+					<h3>FDM</h3>
 				</section>
 				<section>
-					<div data-video = "WHO6G67GJbM"
-         data-startseconds = "70"
-         data-endseconds = "110"
-         data-height = "309"
-         data-width = "550"
-         id = "youtube-player">
-    </div>
-				</section>
-			</section>
-
-			<section>
-				<section id="fragments">
-					<h2>Fragments</h2>
-					<p>Hit the next arrow...</p>
-					<p class="fragment">... to step through ...</p>
-					<p><span class="fragment">... a</span> <span class="fragment">fragmented</span> <span class="fragment">slide.</span></p>
-
+					<div data-video="WHO6G67GJbM" data-startseconds="70" data-endseconds="110" data-height="309" data-width="550" id="youtube-player"></div>
 					<aside class="notes">
 						This slide has fragments which are also stepped through in the notes window.
 					</aside>
 				</section>
-				<section>
-					<h2>Fragment Styles</h2>
-					<p>There's different types of fragments, like:</p>
-					<p class="fragment grow">grow</p>
-					<p class="fragment shrink">shrink</p>
-					<p class="fragment fade-out">fade-out</p>
-					<p class="fragment fade-up">fade-up (also down, left and right!)</p>
-					<p class="fragment current-visible">current-visible</p>
-					<p>Highlight <span class="fragment highlight-red">red</span> <span class="fragment highlight-blue">blue</span> <span class="fragment highlight-green">green</span></p>
-				</section>
 			</section>
-
-			<section id="transitions">
-				<h2>Transition Styles</h2>
-				<p>
-					You can select from different transitions, like: <br>
-					<a href="?transition=none#/transitions">None</a> -
-					<a href="?transition=fade#/transitions">Fade</a> -
-					<a href="?transition=slide#/transitions">Slide</a> -
-					<a href="?transition=convex#/transitions">Convex</a> -
-					<a href="?transition=concave#/transitions">Concave</a> -
-					<a href="?transition=zoom#/transitions">Zoom</a>
-				</p>
-			</section>
-
-			<section id="themes">
-				<h2>Themes</h2>
-				<p>
-					reveal.js comes with a few themes built in: <br>
-					<!-- Hacks to swap themes after the page has loaded. Not flexible and only intended for the reveal.js demo deck. -->
-					<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/black.css'); return false;">Black (default)</a> -
-					<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/white.css'); return false;">White</a> -
-					<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/league.css'); return false;">League</a> -
-					<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/sky.css'); return false;">Sky</a> -
-					<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/beige.css'); return false;">Beige</a> -
-					<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/simple.css'); return false;">Simple</a> <br>
-					<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/serif.css'); return false;">Serif</a> -
-					<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/blood.css'); return false;">Blood</a> -
-					<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/night.css'); return false;">Night</a> -
-					<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/moon.css'); return false;">Moon</a> -
-					<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/solarized.css'); return false;">Solarized</a>
-				</p>
-			</section>
-
 			<section>
-				<section data-background="#dddddd">
-					<h2>Slide Backgrounds</h2>
-					<p>
-						Set <code>data-background="#dddddd"</code> on a slide to change the background color. All CSS color formats are supported.
-					</p>
-					<a href="#" class="navigate-down">
-						<img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
-					</a>
-				</section>
+			<section>
+				<h3>SLA</h3>
+			</section>
+			<section>
+				<div data-video="TuuyLZnlc2k" data-startseconds="70" data-endseconds="110" data-height="309" data-width="550" id="youtube-player"></div>
+			</section>
+			</section>
+			<section>
 				<section data-background="https://s3.amazonaws.com/hakim-static/reveal-js/image-placeholder.png">
 					<h2>Image Backgrounds</h2>
 					<pre><code class="hljs">&lt;section data-background="image.png"&gt;</code></pre>
@@ -206,22 +142,6 @@
 				<section data-background="http://i.giphy.com/90F8aUepslB84.gif">
 					<h2>... and GIFs!</h2>
 				</section>
-			</section>
-
-			<section data-transition="slide" data-background="#4d7e65" data-background-transition="zoom">
-				<h2>Background Transitions</h2>
-				<p>
-					Different background transitions are available via the backgroundTransition option. This one's called "zoom".
-				</p>
-				<pre><code class="hljs">Reveal.configure({ backgroundTransition: 'zoom' })</code></pre>
-			</section>
-
-			<section data-transition="slide" data-background="#b5533c" data-background-transition="zoom">
-				<h2>Background Transitions</h2>
-				<p>
-					You can override background transitions per-slide.
-				</p>
-				<pre><code class="hljs" style="word-wrap: break-word;">&lt;section data-background-transition="zoom"&gt;</code></pre>
 			</section>
 
 			<section>
@@ -392,7 +312,7 @@ Reveal.addEventListener( 'customevent', function() {
 			history: true,
 			center: true,
 
-			transition: 'slide', // none/fade/slide/convex/concave/zoom
+			transition: 'none', // none/fade/slide/convex/concave/zoom
 
 			// More info https://github.com/hakimel/reveal.js#dependencies
 			dependencies: [{
