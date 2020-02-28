@@ -94,27 +94,9 @@
 					<h3>FDM</h3>
 				</section>
 				<section>
-					<script type="text/javascript">
-					  var player
-						var ctrlq
-						function onYouTubeIframeAPIReady() {
-							ctrlq = document.getElementById("youtube-player");
-							player = new YT.Player('youtube-player', {
-								height: ctrlq.dataset.height,
-								width: ctrlq.dataset.width,
-								events: {
-									'onReady': function(e) {
-										e.target.cueVideoById({
-											videoId: ctrlq.dataset.video,
-											startSeconds: ctrlq.dataset.startseconds,
-											endSeconds: ctrlq.dataset.endseconds
-										});
-									}
-								}
-							});
-						}
-					</script>
-					<div data-video="WHO6G67GJbM" data-startseconds="70" data-endseconds="110" data-height="309" data-width="550" id="youtube-player"></div>
+					<iframe data-autoplay id="player" type="text/html" width="640" height="360"
+	  			src="http://www.youtube.com/embed/WHO6G67GJbM?start=70&end=110"
+	  			frameborder="0"></iframe>
 					<aside class="notes">
 						This slide has fragments which are also stepped through in the notes window.
 					</aside>
@@ -126,8 +108,8 @@
 			</section>
 			<section>
 				<iframe id="player" type="text/html" width="640" height="360"
-  			src="http://www.youtube.com/embed/TuuyLZnlc2k?start=10&end=20"
-  			frameborder="0"></iframe>
+  			src="http://www.youtube.com/embed/TuuyLZnlc2k?autoplay=1"
+  			frameborder="2"></iframe>
 			</section>
 			</section>
 			<section>
