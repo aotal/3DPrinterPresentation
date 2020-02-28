@@ -21,14 +21,14 @@
 
 .reveal .logo--left {
 	position: absolute;
-	left: -1em;
+	left: 0em;
 	top: -135px;
 }
 
 .reveal .logo--right {
 	position: absolute;
 	top: -135px;
-	right: -1em;
+	right: 0em;
 }
 
 .footnote {
