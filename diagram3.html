@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<head>
+  <link rel="stylesheet" href="css/revealjs-diagram.css">
+</head>
+<body>
+  <script src="https://d3js.org/d3.v3.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script src="js/revealjs-diagram.js"></script>
+  <script>
+
+  var treeData = {
+        name: 'root',
+        x0: window.diagram.height / 2,
+        y0: 0,
+        children: []
+      };
+
+      // define a function to add multiple nodes
+      function addChildren() {
+        window.diagram.addItem('child 1', 'root', treeData)();
+      };
+
+      function removeChildren() {
+        window.diagram.removeItem('child 1', treeData)();
+      }
+
+      // define a function to add multiple links
+      function addLinks() {
+        window.diagram.addLink('child 1', 'tail', treeData)();
+      }
+
+      function removeLinks() {
+        window.diagram.removeLink('child 1', 'tail', treeData)();
+      }
+
+      var _transitions = [
+        addChildren,
+        window.diagram.addItem('tail', 'child 1', treeData),
+        addLinks
+      ];
+
+      var _inverse_transitions = [
+        removeChildren,
+        window.diagram.removeItem('tail', treeData),
+        removeLinks
+      ];
+
+    // register the diagram
+    window.diagram.register('intro', function() {
+      window.diagram.init(treeData);
+    });
+  </script>
+</body>

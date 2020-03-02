@@ -17,6 +17,7 @@
 	<link rel="stylesheet" href="css/reveal.css">
 	<link rel="stylesheet" href="css/theme/white.css" id="theme">
 	<link rel="stylesheet" href="css/style.css" id="theme">
+	<link rel="stylesheet" href="css/revealjs-diagram.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
 
 	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
@@ -50,7 +51,7 @@
 
 		<!-- Any section element inside of this container is displayed as a slide -->
 		<div class="slides">
-			<section>
+			<section class="Presentación">
 				<a href="http://www.icslleida.cat/" class="logo logo--left"><img src="img/logo_GT_lleida.png" alt="GTLleida"></a>
 				<a href="http://www.creballeida.org/es/" class="logo logo--right"><img src="http://creballeida.org/wp-content/uploads/2016/12/logo.png" alt="Gencat"></a>
 				<div class="row">
@@ -66,13 +67,13 @@
 						</p>
 				</div>
 			</section>
-			<section>
+			<section class="Definición de impresión 3D">
 				<h3>Definición</h3>
 				<blockquote cite="https://www.lexico.com/en/definition/3d_printer">
 					&ldquo;A machine allowing the creation of a physical object from a three-dimensional digital model, typically by laying down many thin layers of a material in succession.&rdquo;
 				</blockquote>
 			</section>
-			<section>
+			<section class="Antecedentes históricos">
 				<section>
 					<h3>Antecedentes históricos</h3>
 				</section>
@@ -84,25 +85,43 @@
 					<img src="https://www.mistywest.com/wp-content/uploads/2019/07/Timeline3DPrinting2.png" alt="Timeline">
 				</section>
 			</section>
-			<section data-markdown>
+			<section class="Tipos de impresión" data-markdown>
 				### Tipos de impresión
 				De los diversos métodos de impresión 3D, alguno de los cuales se describen [aquí](https://all3dp.com/1/types-of-3d-printers-3d-printing-technology/),
 				vamos a centrarnos en dos: Modelado por deposición fundida (FDM) y estereolitografía (SLA)
 			</section>
+			<section class="FDM">
 				<section>
-					<h3>FDM</h3>
-					<iframe width="623pt"height="350pt" data-src="https://www.youtube.com/embed/WHO6G67GJbM?start=67&end=120&rel=0&amp;autoplay=1&mute=1"></iframe>
-					<aside class="notes">
-						This slide has fragments which are also stepped through in the notes window.
-					</aside>
+					<h3>Fused deposition modeling (FDM)</h3>
 				</section>
 				<section>
-					<h3>SLA</h3>
-					<iframe width="623pt"height="350pt" data-src="https://www.youtube.com/embed/TuuyLZnlc2k?rel=0&amp;autoplay=1&mute=1"></iframe>
-					<aside class="notes">
-						This slide has fragments which are also stepped through in the notes window.
-					</aside>
+					<p><small>El modelado de deposición fundida (FDM) es un proceso de impresión 3D que utiliza termoplásticos en forma de hilo en el que mediante
+						un extrusor capaz de calentar el filamento por encima de la temperatura de fusión del material crea una estructura por apilado de capas</small></p>
+						<img src="https://www.researchgate.net/profile/Dolores_Serrano/publication/319987351/figure/fig3/AS:541551190134784@1506127273866/Fused-deposition-modelling-FDM-Printing-system_W640.jpg" alt="EsquemaFDM">
 				</section>
+				<section>
+					<h3>Ventaja de la doble extrusión</h3>
+					<iframe width="623pt" height="350pt" data-src="https://www.youtube.com/embed/WHO6G67GJbM?start=67&end=120&rel=0&amp;autoplay=1&mute=1"></iframe>
+					<aside class="notes"></aside>
+				</section>
+			</section>
+			<section class="SLA">
+				<section>
+					<h3>Stereolithography (SLA) 3D Printing</h3>
+				</section>
+				<section>
+					<p><small>La estereolitografía, más comunmente conocida como impresión SLA, es una de las técnicas más populares y extendidas
+						 en el mundo de la impresión 3D. Funciona utilizando un láser de alta potencia para endurecer una resina líquida que se encuentra en un
+						 depósito para crear la forma 3D deseada. En pocas palabras, este proceso convierte el líquido fotosensible en un plástico sólido en 3D, capa por capa,
+						 utilizando un láser de baja potencia y fotopolimerización.</small></p>
+				</section>
+				<section id="fragments">
+					<h3>Demostración del proceso</h3>
+					<iframe width="623pt" height="350pt" data-src="https://www.youtube.com/embed/TuuyLZnlc2k?rel=0&amp;autoplay=1&mute=1"></iframe>
+					<p>No hay posibilidad de doble extrusión</p>
+					<aside class="notes"></aside>
+				</section>
+			</section>
 			<section>
 				<section data-background="https://s3.amazonaws.com/hakim-static/reveal-js/image-placeholder.png">
 					<h2>Image Backgrounds</h2>
@@ -122,77 +141,14 @@
 					<h2>... and GIFs!</h2>
 				</section>
 			</section>
-
 			<section>
-				<h2>Pretty Code</h2>
-				<pre><code class="hljs" data-trim contenteditable>
-function linkify( selector ) {
-  if( supports3DTransforms ) {
-
-    var nodes = document.querySelectorAll( selector );
-
-    for( var i = 0, len = nodes.length; i &lt; len; i++ ) {
-      var node = nodes[i];
-
-      if( !node.className ) {
-        node.className += ' roll';
-      }
-    }
-  }
-}
-					</code></pre>
-				<p>Code syntax highlighting courtesy of <a href="http://softwaremaniacs.org/soft/highlight/en/description/">highlight.js</a>.</p>
+				<section class="fig-container" data-fig-id="fig-diagram3" data-file="diagram3.html">
+				</section>
 			</section>
-
 			<section>
-				<h2>Marvelous List</h2>
-				<ul>
-					<li>No order here</li>
-					<li>Or here</li>
-					<li>Or here</li>
-					<li>Or here</li>
-				</ul>
+				<h3>Interés de la impresión 3d en cirugía</h3>
+				<iframe id="BusquedapubMed" title="3D printing in surgery" width="600" height="400" src="https://www.ncbi.nlm.nih.gov/pubmed/?term=surgery+3d+print"></iframe>
 			</section>
-
-			<section>
-				<h2>Fantastic Ordered List</h2>
-				<ol>
-					<li>One is smaller than...</li>
-					<li>Two is smaller than...</li>
-					<li>Three!</li>
-				</ol>
-			</section>
-
-			<section>
-				<h2>Tabular Tables</h2>
-				<table>
-					<thead>
-						<tr>
-							<th>Item</th>
-							<th>Value</th>
-							<th>Quantity</th>
-						</tr>
-					</thead>
-					<tbody>
-						<tr>
-							<td>Apples</td>
-							<td>$1</td>
-							<td>7</td>
-						</tr>
-						<tr>
-							<td>Lemonade</td>
-							<td>$2</td>
-							<td>18</td>
-						</tr>
-						<tr>
-							<td>Bread</td>
-							<td>$3</td>
-							<td>2</td>
-						</tr>
-					</tbody>
-				</table>
-			</section>
-
 			<section>
 				<h2>Clever Quotes</h2>
 				<p>
@@ -282,6 +238,7 @@ Reveal.addEventListener( 'customevent', function() {
 
 	<script src="lib/js/head.min.js"></script>
 	<script src="js/reveal.js"></script>
+	<script src="js/revealjs-diagram.js"></script>
 
 	<script>
 		// More info https://github.com/hakimel/reveal.js#configuration
@@ -330,6 +287,12 @@ Reveal.addEventListener( 'customevent', function() {
 				{
 					src: 'plugin/notes/notes.js',
 					async: true
+				},
+				{
+					src: 'https://d3js.org/d3.v4.min.js'
+				},
+				{
+					src: 'plugin/d3js/d3js.js'
 				}
 			]
 		});
