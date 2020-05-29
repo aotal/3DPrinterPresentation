@@ -102,7 +102,7 @@
 			<section class="Tipos de impresión" data-markdown>
 				### Tipos de impresión
 				De los diversos métodos de impresión 3D, alguno de los cuales se describen [aquí](https://all3dp.com/1/types-of-3d-printers-3d-printing-technology/),
-				vamos a centrarnos en dos: Modelado por deposición fundida (FDM) y estereolitografía (SLA)
+				vamos a centrarnos en dos: Modelado por deposición fundida (FDM), el que hemos elegido de momento, y estereolitografía (SLA)
 			</section>
 			<section class="FDM">
 				<section>
@@ -148,7 +148,8 @@
 			</section>
 			<section class="Interés en cirugía">
 				<h3>Interés de la impresión 3d en cirugía</h3>
-				<iframe id="BusquedapubMed" title="3D printing in surgery" width="800" height="400" src="https://www.ncbi.nlm.nih.gov/pubmed/?term=surgery+3d+print"></iframe>
+				<form method="get" action="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi" target="new"><br>Búsqueda en <a href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?db=pubmed">PubMed</a>: &nbsp;&nbsp;<br><input type="hidden" name="db"
+						value="PubMed"><br><input name="term" size="45" type="TEXT" value="3D Printing Surgery"><br><input type="submit" value="Go"><br></form>
 			</section>
 			<section class="Braquiterapia">
 				<div class="container">
@@ -177,7 +178,6 @@
 					<div class="row">
 						<div class="col-sm-4">
 							<img src="img/PiezaFreeCAD.jpg" alt="FreeCAD" width="201pt" height="350pt" class="rounded mb-0">
-
 						</div>
 						<div class="col-sm-4">
 							<img src="img/LaminadoPieza.JPG" alt="Laminado pieza cirugía" width="201pt" height="350pt" class="rounded mb-0">
@@ -188,6 +188,60 @@
 					</div>
 				</div>
 			</section>
+			<section class="Última colaboración con Cirugía">
+				<section>
+					<h3>Última colaboración con Cirugía</h3>
+				</section>
+				<section class="Segmentación sobre secuencia de imágenes">
+					<div class="container">
+						<h3>Segmentación sobre secuencia de imágenes</h3>
+						<div class="row">
+							<div class="col-sm-12">
+								<img src="img/TresVistas.JPG" alt="CT" width="666pt" height="300pt" class="rounded mb-0">
+							</div>
+				</section>
+				<section class="Vista 3D">
+					<div class="container">
+						<h3>Vista 3D</h3>
+						<div class="row">
+							<div class="col-sm-12">
+								<img src="img/VistaEclipse.JPG" alt="CT" width="465pt" height="400pt" class="rounded mb-0">
+							</div>
+				</section>
+				<section class="Procesado en MeshLab">
+					<div class="container">
+						<h3>Procesado en MeshLab</h3>
+						<div class="row">
+							<div class="col-sm-12">
+								<img src="img/AntesDespuesMeshLab.JPG" alt="CT" width="600pt" height="300pt" class="rounded mb-0">
+							</div>
+				</section>
+				<section class="Creación de los soportes">
+					<div class="container">
+						<h3>Creación de los Soportes</h3>
+						<div class="row">
+							<div class="col-sm-12">
+								<img src="img/Soportes.JPG" alt="CT" width="465pt" height="400pt" class="rounded mb-0">
+							</div>
+				</section>
+				<section class="Impresión del Modelo">
+					<div class="container">
+						<h3>Impresión del Modelo</h3>
+						<div class="row">
+							<div class="col-sm-6">
+								<video width="250" height="400" autoplay loop>
+  								<source src="img/Modelo1.mp4" type="video/mp4">
+								</video>
+							</div>
+							<div class="col-sm-6">
+								<video width="250" height="400" autoplay loop>
+  								<source src="img/Modelo2.mp4" type="video/mp4">
+								</video>
+							</div>
+				</section>
+			</section>
+
+
 			<section class="fig-container" data-fig-id="Final" data-file="Fin.html">
 				<h1>Gracias por su atención</h1>
 			</section>
@@ -252,7 +306,9 @@
 				{
 					src: 'plugin/d3js/d3js.js'
 				},
-				{ src: 'plugin/menu/menu.js' }
+				{
+					src: 'plugin/menu/menu.js'
+				}
 			]
 		});
 	</script>
